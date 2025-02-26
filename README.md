@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Aggregator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h2 {
+            margin: 0;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        .menu a:hover {
+            background: #34495e;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .content {
+            display: flex;
+            flex: 1;
+        }
+        .email-list {
+            width: 300px;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+            padding: 10px;
+            background: #f5f5f5;
+        }
+        .email-list div {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .email-list div:hover {
+            background: #ddd;
+        }
+        .email-preview {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Inbox</h2>
+        <div class="menu">
+            <a href="#">All Emails</a>
+            <a href="#">Unread</a>
+            <a href="#">Starred</a>
+            <a href="#">Sent</a>
+            <a href="#">Trash</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">Onebox Email Aggregator</div>
+        <div class="content">
+            <div class="email-list">
+                <div>Email from Alice - Subject 1</div>
+                <div>Email from Bob - Subject 2</div>
+                <div>Email from Charlie - Subject 3</div>
+                <div>Email from Dave - Subject 4</div>
+            </div>
+            <div class="email-preview">
+                <h2>Email Preview</h2>
+                <p>Select an email to read its content here.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
